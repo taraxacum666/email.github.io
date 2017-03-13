@@ -1,0 +1,60 @@
+doctype html
+html(ng-app) 
+	head
+		link(rel="stylesheet", href="css/style.css")
+		meta(charset='utf-8')
+		title письмо от компании
+		script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js")
+		script(src="js/app.js")
+
+	body
+		.email-container
+			.email-header(ng-controller="firstCtrl") 
+				.email-center
+					.email-heder-topline
+						a.email-logo(href="//site.com")
+							img(src="img/logo.png", alt="Logo")
+
+						.email-social-wrap
+							a(href="#")
+								img(src="img/soc_twitter.png",alt="tw")
+							a(href="#")
+								img(src="img/soc_vk.png",alt="vk")
+							a(href="#")
+								img(src="img/soc_fb.png",alt="fb")
+
+					.email-header-top.
+						Самое лучшее предложение которое вы могли получить
+
+					a(href="#").email-button Подробнее
+
+
+			.email-content
+				.email-center		
+					.email-tizers-wrap
+						.email-tizer-item
+							img(src="img/icon_1.png", alt="alt")
+							p У нас есть Лапки
+						.email-tizer-item
+							img(src="img/icon_2.png", alt="alt")
+							p У нас есть Усы
+						.email-tizer-item
+							img(src="img/icon_3.png", alt="alt")
+							p У нас есть Чемоданы
+					.email-sales-text Заказывая сейчас - получаешь скидку
+
+					.mail-products-wrap
+						- for (var x = 1; x<5; x++)
+							.mail-products-item
+								a(href="")
+									img(src="img/items/"+ x +".jpg", alt="alt")
+								.mail-price 2 000 руб.
+								a(href="#").product-button Заказать
+
+				.email-footer.
+					ООО"Лучшее предложение" <a href="#">Отписаться от рассылки</a>.
+
+
+
+
+
